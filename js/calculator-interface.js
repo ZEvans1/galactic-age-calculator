@@ -5,11 +5,10 @@ $(document).ready(function() {
     event.preventDefault();
     let userAge = $('#user-age').val();
     let planet = $('#planet').val();
-    // var output = pingPong(goal);
-    // output.forEach(function(element) {
-    //   $('#solution').append("<li>" + element + "</li>");
-    // });
-    console.log(userAge);
-    console.log(planet);
+    let calculator = new Calculator(userAge, planet);
+    calculator.ageToSeconds();
+    calculator.convertToYears();
+    console.log(calculator.ageToSeconds());
+    console.log(calculator.convertToYears());
   });
 });

@@ -1,11 +1,13 @@
 var gulp = require('gulp');
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
-var babelify = require("babelify");
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
+var babelify = require("babelify");
 var utilities = require('gulp-util');
 var del = require('del');
+var jshint = require('gulp-jshint');
+var buildProduction = utilities.env.production;
 var lib = require('bower-files')({
       "overrides":{
         "bootstrap" : {
@@ -18,7 +20,18 @@ var lib = require('bower-files')({
       }
     });
 var browserSync = require('browser-sync').create();
-var buildProduction = utilities.env.production;
+
+gulp.task('jshint', function(){
+  return gulp.src(['js/*.js'])
+    .pipe(jshint())
+    .pipe(jshint.reporter('default'));
+});
+
+gulp.task('concatInterface', function() {
+  return gulp.src(['./js/calculator-interface.js', './js/expectancy-interface.js'])
+    .pipe(concat('allConcat.js'))
+    .pipe(gulp.dest('./tmp'));
+});
 
 gulp.task('jsBrowserify', ['concatInterface'], function() {
   return browserify({ entries: ['./tmp/allConcat.js'] })
@@ -28,12 +41,6 @@ gulp.task('jsBrowserify', ['concatInterface'], function() {
     .bundle()
     .pipe(source('app.js'))
     .pipe(gulp.dest('./build/js'));
-});
-
-gulp.task('concatInterface', function() {
-  return gulp.src(['./js/calculator-interface.js', './js/expectancy-interface.js'])
-    .pipe(concat('allConcat.js'))
-    .pipe(gulp.dest('./tmp'));
 });
 
 gulp.task("minifyScripts", ["jsBrowserify"], function(){
@@ -57,19 +64,6 @@ gulp.task('bowerCSS', function () {
 
 gulp.task('bower', ['bowerJS', 'bowerCSS']);
 
-gulp.task('serve', function() {
-  browserSync.init({
-    server: {
-      baseDir: "./",
-      index: "index.html"
-    }
-  });
-
-  gulp.watch(['js/*.js'], ['jsBuild']);
-  gulp.watch(['bower.json'], ['bowerBuild']);
-
-});
-
 gulp.task('jsBuild', ['jsBrowserify', 'jshint'], function(){
   browserSync.reload();
 });
@@ -89,4 +83,17 @@ gulp.task('build', ['clean'], function(){
     gulp.start('jsBrowserify');
   }
   gulp.start('bower');
+});
+
+gulp.task('serve', function() {
+  browserSync.init({
+    server: {
+      baseDir: "./",
+      index: "index.html"
+    }
+  });
+
+  gulp.watch(['js/*.js'], ['jsBuild']);
+  gulp.watch(['bower.json'], ['bowerBuild']);
+
 });
