@@ -7,7 +7,9 @@ $(document).ready(function() {
     let planet = $('#planet').val();
     let expectancy = parseInt($('#expectancy').val());
     let calculator = new Calculator(userAge, planet, expectancy);
-    calculator.userExpectancy();
-    console.log(calculator.userExpectancy());
+    $("#hide").show();
+    $("#age-result").text(calculator.convertToYears());
+    $(".planet-choice").text(calculator.planet);
+    $("#expectancy-result").text(calculator.userExpectancy());
   });
 });
