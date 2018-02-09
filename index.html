@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script> -->
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="build/js/app.js"></script>
     <title>Galactic Age Calculator</title>
   </head>
   <body>
     <form id="age-form">
       <label for="age">Enter Age Here</label>
-      <input id="age" type="text">
+      <input id="age" type="number">
       <label for="planet">Select the planet you would like to know your age on</label>
       <select class="form-control" id="planet">
         <option>Mercury</option>
@@ -18,7 +18,7 @@
         <option>Mars</option>
         <option>Jupiter</option>
       </select>
-      <button type="submit">Add Journal Entry</button>
+      <button type="submit">Calculate Age</button>
     </form>
   </body>
 </html>
