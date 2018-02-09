@@ -7,11 +7,8 @@ describe('Calculator', function () {
     expect(calculator.planet).toEqual("Mercury")
   });
 
-describe('Calculator', function () {
-  it('should test if a year can be converted to seconds', function() {
+  it('should test if difference works', function() {
     let calculator = new Calculator(1, "Mercury");
-    expect(calculator.ageToSeconds()).toEqual(31536001)
+    expect(calculator.convertToYears()).not.toEqual(1)
   });
-
-
 });
