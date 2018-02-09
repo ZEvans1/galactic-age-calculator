@@ -50,15 +50,15 @@ export class Calculator {
     const marsYear = 1.88;
     const jupiterYear = 11.86;
     if (this.planet === "Mercury") {
-      return years * mercuryYear;
+      return (years * mercuryYear).toFixed(2);
     } else if (this.planet === "Venus") {
-      return years * venusYear;
+      return (years * venusYear).toFixed(2);
     } else if (this.planet === "Earth") {
-      return years * earthYear;
+      return (years * earthYear).toFixed(2);
     } else if (this.planet === "Mars") {
-      return years * marsYear;
+      return (years * marsYear).toFixed(2);
     } else if (this.planet === "Jupiter") {
-      return years * jupiterYear;
+      return (years * jupiterYear).toFixed(2);
     } else {
       return "no planet selected"
     }
@@ -69,7 +69,7 @@ export class Calculator {
     if (expectancyYears < 0) {
       return "You are living beyond the average life expectancy"
     } else {
-      return expectancyYears + " years";
+      return expectancyYears.toFixed(2) + " years";
     }
   }
 
