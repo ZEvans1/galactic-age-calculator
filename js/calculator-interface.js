@@ -1,4 +1,6 @@
-import { Calculator } from './../js/calculator.js';
+var Calculator = require('./../js/calculator.js').calculatorModule;
+
+//import { Calculator } from './../js/calculator.js';
 
 $(document).ready(function() {
   $('#age-form').submit(function(event) {
