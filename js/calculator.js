@@ -1,17 +1,10 @@
-function Calculator(userAge, planet) {
-  this.userAge = userAge;
-  this.planet = planet;
-}
+export class Calculator {
+  constructor(userAge, planet) {
+    this.userAge = userAge;
+    this.planet = planet;
+  }
 
-exports.calculatorModule = Calculator;
+  ageToSeconds() {
 
-// export class Calculator {
-//   constructor(userAge, planet) {
-//     this.userAge = userAge;
-//     this.planet = planet;
-//   }
-//
-//   ageToSeconds() {
-//
-//   }
-// }
+  }
+};
