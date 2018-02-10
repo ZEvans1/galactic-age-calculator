@@ -19,6 +19,11 @@ _This is an HTML page that uses JavaScript to determine a user's age on other pl
 
 * _This project can be accessed [here](https://github.com/ZEvans1/galactic-age-calculator)_
 * _Clone the repository to your machine_
+* _Run the following commands:_
+* _npm install_
+* _bower install_
+* _gulp build_
+* 
 * _Open in a web browser (was made with Chrome)_
 
 ## Known Bugs
