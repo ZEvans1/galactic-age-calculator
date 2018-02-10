@@ -2,6 +2,24 @@
   display: none;
 }
 
+div.image {
+  content: url('../img/solar.jpg');
+  margin-left: auto;
+  margin-right: auto;
+}
+
 h1 {
+  text-align: center;
+  color: white;
+}
+
+p {
+  color: white;
+}
+
+body {
+  background-color: black;
+
+  color: white;
   text-align: center;
 }
