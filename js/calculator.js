@@ -3,9 +3,6 @@ export class Calculator {
     this.userAge = userAge;
     this.planet = planet;
     this.expectancy = expectancy;
-    console.log(userAge);
-    console.log(planet);
-    console.log(expectancy);
   }
 
   ageToSeconds() {
