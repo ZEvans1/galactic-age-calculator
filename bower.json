@@ -6,7 +6,7 @@
     "ZEvans1 <zte.zachary@gmail.com>"
   ],
   "license": "ISC",
-  "homepage": "",
+  "homepage": "https://github.com/ZEvans1/galactic-age-calculator",
   "ignore": [
     "**/.*",
     "node_modules",

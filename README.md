@@ -8,6 +8,11 @@
 
 _This is an HTML page that uses JavaScript to determine a user's age on other planets in our solar system. Age is determined by requesting a user's birthday and then converting by using a planet's orbital period._
 
+## Future Work
+
+* _Convert decimal results to months and days._
+* _Add to UI so a user could click on a planet within the solar system for their age calculation._
+
 ### Specs
 | Behavior | Input | Output |
 | :-------------     | :------------- | :-------------
@@ -23,7 +28,7 @@ _This is an HTML page that uses JavaScript to determine a user's age on other pl
 * _npm install_
 * _bower install_
 * _gulp build_
-* 
+*
 * _Open in a web browser (was made with Chrome)_
 
 ## Known Bugs

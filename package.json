@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "karma start karma.conf.js"
+    "test": "jasmine"
   },
   "author": "",
   "license": "ISC",
@@ -13,7 +13,7 @@
     "babelify": "^8.0.0",
     "bower-files": "^4.0.0",
     "browser-sync": "^2.23.6",
-    "browserify": "^15.0.0",
+    "browserify": "^15.2.0",
     "del": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
@@ -22,9 +22,10 @@
     "gulp-util": "^3.0.8",
     "jasmine": "^2.9.0",
     "jasmine-core": "^2.9.1",
+    "jasmine-es6": "^0.4.3",
     "jshint": "^2.9.5",
     "karma": "^2.0.0",
-    "karma-browserify": "^5.1.3",
+    "karma-browserify": "^5.2.0",
     "karma-chrome-launcher": "^2.2.0",
     "karma-cli": "^1.0.1",
     "karma-jasmine": "^1.1.1",
@@ -35,5 +36,14 @@
   },
   "dependencies": {
     "bower": "^1.8.2"
-  }
+  },
+  "description": "#### _A page for determining a user's age on other planets for week JavaScript week 1 @ Epicodus, Feb. 9, 2018_",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZEvans1/galactic-age-calculator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ZEvans1/galactic-age-calculator/issues"
+  },
+  "homepage": "https://github.com/ZEvans1/galactic-age-calculator#readme"
 }

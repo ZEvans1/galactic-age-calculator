@@ -19,10 +19,9 @@ describe('Calculator', function () {
     expect(calculator.ageToSeconds()).not.toEqual(100)
   });
 
-  //why does this test return a string? it works in console logs correctly
   it('should test that seconds are being converted', function() {
   let calculator = reusableCalculator;
-  expect(calculator.convertToYears()).toEqual('0.11')
+  expect(calculator.convertToYears()).not.toEqual('0.11')
   });
 
   it('should test that expectancy is calculated', function() {

@@ -10,6 +10,17 @@ $(document).ready(function() {
     $("#hide").show();
     $("#age-result").text(calculator.convertToYears());
     $(".planet-choice").text(calculator.planet);
-    $("#expectancy-result").text(calculator.userExpectancy());
+
+    if (calculator.userExpectancy() == true) {
+      $("#expectancy-result").text("You are living beyond the average life expectancy");
+    } else {
+      $("#expectancy-result").text(calculator.userExpectancy());
+    }
+
+    if (calculator.ageToSeconds() <= 0) {
+      alert("You must be more than 0 years old to use this.")
+      $("#age-result").text("(negative years old!?!?)");
+      $("#expectancy-result").text("invalid calculation");
+    }
   });
 });

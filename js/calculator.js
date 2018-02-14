@@ -20,9 +20,6 @@ export class Calculator {
     const jupiterYear = 11.86;
     let convertedExpectancy = this.expectancy;
 
-    if (this.expectancy <= 0) {
-      return "I'm sorry, but you have to be more than 0 years old to use this."
-    }
 
     if (this.planet === "Mercury") {
       return convertedExpectancy * mercuryYear;
@@ -64,7 +61,7 @@ export class Calculator {
   userExpectancy() {
     let expectancyYears = this.convertExpectancy() - this.convertToYears();
     if (expectancyYears < 0) {
-      return "You are living beyond the average life expectancy"
+      return true;
     } else {
       return expectancyYears.toFixed(2) + " years";
     }
